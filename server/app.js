@@ -16,7 +16,7 @@ async function init() {
   app.use(express.urlencoded({ extended: true }));
   await client.connect();
   console.log("--------Connected Success-------");
-  
+
   app.use("/products", productRouter);
 
   app.get("/", (req, res) => {
